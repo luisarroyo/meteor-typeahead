@@ -53,11 +53,15 @@ Template.demo.helpers({
     return [
       {
         name: 'nba-teams',
+        valueKey: 'name',
+      	displayKey: 'name',
         local: function() { return Nba.find().fetch().map(function(it){ return it.name; }); },
         header: '<h3 class="league-name">NBA Teams</h3>'
       },
       {
         name: 'nhl-teams',
+        valueKey: 'name',
+      	displayKey: 'name',
         local: function() { return Nhl.find().fetch().map(function(it){ return it.name; }); },
         header: '<h3 class="league-name">NHL Teams</h3>'
       }
